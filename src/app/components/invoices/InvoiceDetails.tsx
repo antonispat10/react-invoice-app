@@ -106,7 +106,8 @@ export default function InvoiceDetails() {
       ...current,
       payload: {
         ...current.payload,
-        invoice_lines_attributes
+        invoice_lines_attributes,
+        total: +current.payload.total + +product.unit_price
       }
     }))
     updateSearch(search);
